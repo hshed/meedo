@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskReminderBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f8f8f8"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    tools:ignore="HardcodedText" >
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#00000000" />
+
+    <TextView
+        android:id="@+id/taskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="Make coffee for Hrishikesh"
+        android:textColor="#2dbcd7"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/taskLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginLeft="20dp"
+        android:padding="2dp"
+        android:text="at IIT Guwahati"
+        android:textColor="#aeaeae"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:id="@+id/taskActionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <LinearLayout
+            android:id="@+id/taskActionsLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/taskStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Task Completed."
+                android:textColor="#828282"
+                android:textSize="15sp" />
+
+            <!-- <ViewStub
+                android:id="@+id/laterStub"
+                android:layout_width="120dip"
+                android:layout_height="40dip"
+                android:inflatedId="@+id/laterTree"
+                android:layout="@layout/later_stubtree" />-->
+
+            <TextView
+                android:id="@+id/taskStatusUndo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Undo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/taskActionsLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/taskDone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/taskdone"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Done"
+                android:textColor="#5a5050"
+                android:textSize="14sp" />
+
+            <!-- <TextView
+                android:id="@+id/taskLater"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/latertask"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Later"
+                android:textColor="#5a5050"
+                android:textSize="14sp" />-->
+
+            <TextView
+                android:id="@+id/taskDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/deletetask"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Delete"
+                android:textColor="#5a5050"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

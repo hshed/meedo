@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reminderRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafbfb"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,ContentDescription" >
+
+    <ListView
+        android:id="@+id/reminderListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/quickReminder"
+        android:layout_alignParentTop="true"
+        android:divider="#d8d9d9"
+        android:dividerHeight="0.5dp"
+        android:footerDividersEnabled="true" />
+
+    <LinearLayout
+        android:id="@+id/undobar"
+        style="@style/UndoBar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/undobar_message"
+            style="@style/UndoBarMessage" />
+
+        <Button
+            android:id="@+id/undobar_button"
+            style="@style/UndoBarButton" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/quickReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="5dp" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/shadowlayout" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <ImageButton
+            android:id="@+id/tts1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterQuickreminder"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="center"
+            android:src="@drawable/tts" />
+
+        <ImageButton
+            android:id="@+id/addQuickreminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterQuickreminder"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/addbutton"
+            android:src="@drawable/content_new" />
+
+        <EditText
+            android:id="@+id/enterQuickreminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/addQuickreminder"
+            android:layout_toRightOf="@+id/tts1"
+            android:background="@drawable/custom_edittext"
+            android:hint="Add a task.."
+            android:inputType="textCapSentences"
+            android:textColor="#5d6061" />
+
+        <LinearLayout
+            android:id="@+id/fourButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addQuickreminder"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/calendarText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/bell"
+                android:gravity="center_horizontal"
+                android:text="Reminder"
+                android:textColor="#828282"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/note"
+                android:gravity="center_horizontal"
+                android:text="Note"
+                android:textColor="#828282"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/subtask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/no_subtask"
+                android:gravity="center_horizontal"
+                android:text="Subtasks"
+                android:textColor="#828282"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/ratingStar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/star"
+                android:gravity="center_horizontal"
+                android:text="Important"
+                android:textColor="#828282"
+                android:textSize="12sp" />
+            
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/fourButtons" />
+    </RelativeLayout>
+
+</RelativeLayout>

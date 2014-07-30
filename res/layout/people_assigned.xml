@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/peopleAssignedContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:id="@+id/pingParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/userJoined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:gravity="right"
+            android:paddingTop="3dp"
+            android:layout_gravity="center_vertical"
+            android:text="waiting"
+            android:textColor="#cbcbcb"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/pingUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:paddingTop="3dp"
+            android:visibility="gone"
+            android:text="ping"
+            android:textColor="#2dbcd7"
+            android:textSize="19sp" />
+
+        <ImageButton
+            android:id="@+id/removeUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:paddingTop="3dp"
+            android:src="@drawable/remove_user"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/personAssigned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/pingParent"
+        android:paddingLeft="15dp"
+        android:paddingTop="3dp"
+        android:text="Hrishikesh Kumar"
+        android:textColor="#828282"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/assignedVia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/personAssigned"
+        android:layout_toLeftOf="@+id/pingParent"
+        android:paddingLeft="15dp"
+        android:paddingTop="1dp"
+        android:text="meedo user"
+        android:textColor="#cbcbcb"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/assignedVia"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="1dp"
+        android:background="#c5c5c5" />
+
+</RelativeLayout>

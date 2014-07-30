@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/monRtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/weekly_repeat_circle"
+            android:gravity="center"
+            android:text="M"
+            android:drawablePadding="3dp"
+            android:textColor="#b2b2b2"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tueRtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/weekly_repeat_circle"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            android:text="T"
+            android:textColor="#b2b2b2"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/wedRtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/weekly_repeat_circle"
+            android:gravity="center"
+            android:text="W"
+            android:textColor="#b2b2b2"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/thuRtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/weekly_repeat_circle"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            android:text="T"
+            android:textColor="#b2b2b2"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/friRtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/weekly_repeat_circle"
+            android:gravity="center"
+            android:text="F"
+            android:drawablePadding="3dp"
+            android:textColor="#b2b2b2"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/satRtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/weekly_repeat_circle"
+            android:gravity="center"
+            android:text="S"
+            android:drawablePadding="3dp"
+            android:textColor="#b2b2b2"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/sunRtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/weekly_repeat_circle"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            android:text="S"
+            android:textColor="#b2b2b2"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="#d3d7da" />
+
+    <LinearLayout
+        android:id="@+id/okCancelGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/okWeekly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/vertical_line"
+            android:gravity="center_horizontal"
+            android:text="OK"
+            android:textColor="#2dbcd7"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cancelWeeklyR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Cancel"
+            android:textColor="#2dbcd7"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/repeatDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ExpandableListView
+        android:id="@+id/repeatList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card"
+        android:padding="5dp"
+        android:divider="#cfcfcf"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@android:color/transparent"
+        android:childDivider="#00cfcfcf"
+        android:groupIndicator="@android:color/transparent">
+    </ExpandableListView>
+
+</LinearLayout>

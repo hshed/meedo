@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget32"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f5" >
+
+    <!-- <TextView
+        android:id="@+id/Skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signupButton"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:text=" Skip Signin"
+        android:textColor="#2dbcd7"
+        android:textSize="16sp" />-->
+
+    <ImageView
+        android:id="@+id/meedobckg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="20dp"
+        android:src="@drawable/meedo" />
+    <com.facebook.widget.LoginButton
+        android:id="@+id/signupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/meedobckg"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

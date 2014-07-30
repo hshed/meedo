@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.MyApp" parent="Theme.Sherlock.Light">
+        <item name="actionBarStyle">@style/Widget.MyApp.ActionBar</item>
+        <item name="android:actionBarStyle">@style/Widget.MyApp.ActionBar</item>
+        <item name="android:spinnerDropDownItemStyle">@style/MyApp.Widget.Holo.DropDownItem</item>
+        <item name="spinnerDropDownItemStyle">@style/MyApp.Widget.Holo.DropDownItem</item>
+        <item name="android:spinnerItemStyle">@style/MyApp.Widget.Holo.SpinnerItem</item>
+        <item name="spinnerItemStyle">@style/MyApp.Widget.Holo.SpinnerItem</item>
+    </style>
+   
+
+    <style name="Theme.MyApp.Dialog" parent="Theme.Sherlock.Light.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Widget.MyApp.ActionBar" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="titleTextStyle">@style/Widget.MyApp.TitleTextStyle</item>
+        <item name="android:titleTextStyle">@style/Widget.MyApp.TitleTextStyle</item>
+    </style>
+    <style name="Widget.MyApp.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">#f9f9f9</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--
+    <style name="Widget.MyApp.ActionDrop" parent="@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar">
+        <item name="background">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:popupBackground">#fafbfb</item>
+    </style>
+
+    -->
+
+    <style name="Widget.MyApp.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">#f9f9f9</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyApp.Widget.Holo.DropDownItem" parent="Widget.Sherlock.Light.DropDownItem.Spinner">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:height">30dp</item>
+        <item name="android:background">#fafbfb</item>
+    </style>
+
+    <style name="MyApp.Widget.Holo.SpinnerItem" parent="Widget.Sherlock.TextView.SpinnerItem">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calendarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fafbfb"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText" >
+
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fafbfb"
+            android:orientation="vertical" >
+
+            <com.cw.msumit.views.CalendarView
+                android:id="@+id/customCalendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <View
+                android:id="@+id/dividernew"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/customCalendarView"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="5dp"
+                android:background="#d3d7da" />
+
+            <LinearLayout
+                android:id="@+id/timeSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dividernew"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/nineAm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:gravity="center_horizontal"
+                    android:padding="3dp"
+                    android:text="9.00am"
+                    android:textColor="#7f7f7f"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/twelve"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:gravity="center_horizontal"
+                    android:padding="3dp"
+                    android:text="12.00pm"
+                    android:textColor="#7f7f7f"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/three"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:gravity="center_horizontal"
+                    android:padding="3dp"
+                    android:text="3.00pm"
+                    android:textColor="#7f7f7f"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/six"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:gravity="center_horizontal"
+                    android:padding="3dp"
+                    android:text="6.00pm"
+                    android:textColor="#7f7f7f"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividernew2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/timeSlots"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="5dp"
+                android:background="#d3d7da" />
+
+            <LinearLayout
+                android:id="@+id/customTimeSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dividernew2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/customTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/wrench"
+                    android:drawablePadding="0dp"
+                    android:gravity="center"
+                    android:text="Choose Custom"
+                    android:textColor="#7f7f7f"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/notime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="No Time"
+                    android:textColor="#7f7f7f"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customTimeSlots"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="#ececec"
+                android:padding="10dp"
+                android:text="Repeat:"
+                android:textColor="#2dbcd7"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/repeat"
+                android:layout_margin="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fafbfb"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/newestView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/shadowlayout" />
+
+        <LinearLayout
+            android:id="@+id/locationDoneOrNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp" >
+
+            <TextView
+                android:id="@+id/doneText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/vertical_line"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:text="DONE"
+                android:textColor="#2dbcd7"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/noReminderText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:text="NO REMINDER"
+                android:textColor="#2dbcd7"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

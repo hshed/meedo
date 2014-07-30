@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="syncOptions">
+		<item>Auto-sync</item>
+		<item>Auto-Sync Over Wifi only</item>
+		<item>Sync When App is active</item>
+	</string-array>
+	<string-array name="syncValues">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		
+	</string-array>
+	<string-array name="editListItems">
+		<item>Edit</item>
+		<item>Delete</item>
+	</string-array>  
+	<string-array name="timerSpinnerItem">
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>4 hours</item>
+        <item>5 hours</item>
+    </string-array>
+    <string-array name="timerSpinnerItemValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="sideMenuListItems">
+        <item>Completed Task</item>
+        <item>Important Task</item>
+        <item>Personal</item>
+        <item>Custom List</item>
+        <item>Work</item>
+    </string-array>
+</resources>

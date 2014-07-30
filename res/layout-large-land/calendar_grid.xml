@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calendarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafbfb"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText" >
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fafbfb"
+            android:orientation="vertical" >
+
+            <!--<LinearLayout
+                android:id="@+id/todayTomorrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/card"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/today"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:drawableRight="@drawable/vertical_line"
+                    android:gravity="center_horizontal"
+                    android:text="TODAY"
+                    android:textColor="#7f7f7f"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tomorrow"
+                    android:layout_width="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:drawableRight="@drawable/vertical_line"
+                    android:gravity="center_horizontal"
+                    android:text="TOMORROW"
+                    android:textColor="#7f7f7f"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/thisWeekend"
+                    android:layout_width="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/vertical_line"
+                    android:gravity="center_horizontal"
+                    android:text="THIS WEEKEND"
+                    android:textColor="#7f7f7f"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/nextWeek"
+                    android:layout_width="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:gravity="center_horizontal"
+                    android:text="NEXT WEEK"
+                    android:textColor="#7f7f7f"
+                    android:textSize="18sp" />
+            </LinearLayout>-->
+
+            <com.cw.msumit.views.CalendarView
+                android:id="@+id/customCalendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true" />
+
+           
+
+            <LinearLayout
+                android:id="@+id/timeSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:layout_alignTop="@+id/customCalendarView"
+                android:layout_alignBottom="@+id/customCalendarView"
+                android:layout_toRightOf="@+id/customCalendarView"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/nineAm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="3dp"
+                    android:text="9.00am"
+                    android:textColor="#7f7f7f"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/twelve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="3dp"
+                    android:text="12.00pm"
+                    android:textColor="#7f7f7f"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="3dp"
+                    android:text="3.00pm"
+                    android:textColor="#7f7f7f"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="3dp"
+                    android:text="6.00pm"
+                    android:textColor="#7f7f7f"
+                    android:textSize="25sp" />
+                <TextView
+                    android:id="@+id/customTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Custom"
+                    android:textColor="#7f7f7f"
+                    android:textSize="25sp" />
+                <TextView
+                    android:id="@+id/notime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="No Time"
+                    android:textColor="#7f7f7f"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+             <View
+                android:id="@+id/dividernew"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/customCalendarView"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="5dp"
+                android:background="#d3d7da" />
+
+          
+
+            <TextView
+                android:id="@+id/repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dividernew"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="#ececec"
+                android:padding="10dp"
+                android:text="Repeat: Only once"
+                android:textColor="#2dbcd7"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/repeat"
+                android:layout_margin="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/newestView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/shadowlayout" />
+
+        <LinearLayout
+            android:id="@+id/doneOrNot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <TextView
+                android:id="@+id/doneText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="#2dbcd7"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Done"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/noReminderText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="#ed1c24"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="No Reminder"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

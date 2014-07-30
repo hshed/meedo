@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootDelegate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText" >
+
+    <RelativeLayout
+        android:id="@+id/reminderListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        tools:ignore="HardcodedText" >
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/reminderStatusLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:id="@+id/starredOrNot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/addButtonText"
+                android:src="@drawable/isstar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reminderDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="0dp"
+            android:layout_toLeftOf="@+id/subtask_image"
+            android:layout_toRightOf="@+id/reminderStatusLayout"
+            android:orientation="vertical"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/titleOfReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:ellipsize="end"
+                android:ems="3"
+                android:lines="1"
+                android:singleLine="true"
+                android:text="Make omelet an make omelet and make mleje eljll hh"
+                android:textColor="#5d6061"
+                android:textSize="18sp" />
+
+            <!-- Artist Name -->
+
+            <TextView
+                android:id="@+id/personInvolved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:ems="3"
+                android:lines="1"
+                android:singleLine="true"
+                android:text="From Customer"
+                android:textColor="#a2a5a5"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+       <!-- <LinearLayout
+            android:id="@+id/wiresImageContainer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/reminderSecondaryDetails"
+            android:baselineAligned="false"
+            android:padding="3dip" >
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1" >
+
+                <ImageButton
+                    android:id="@+id/subtask_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:scaleType="center"
+                    android:src="@drawable/subtask" />
+
+                <TextView
+                    android:id="@+id/subtaskCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4.68dp"
+                    android:layout_marginTop="6.30dp"
+                    android:text="3"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>-->
+
+        <ImageButton
+            android:id="@+id/subtask_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/reminderSecondaryDetails"
+            android:paddingTop="5dp"
+            android:focusable="false"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@android:color/transparent"
+            android:scaleType="center"
+            android:src="@drawable/subtask"/>
+        <!-- Rightend Duration -->
+
+        <LinearLayout
+            android:id="@+id/reminderSecondaryDetails"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/reminderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dip"
+                android:text="26 Oct"
+                android:textColor="#a2a5a5"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/reminderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dip"
+                android:text=""
+                android:textColor="#a2a5a5"
+                android:textSize="12sp" />
+
+           <!--  <TextView
+                android:id="@+id/reminderPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dip"
+                android:text=""
+                android:textColor="#a2a5a5"
+                android:textSize="10sp"
+                android:visibility="gone" /> -->
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--
+    <View
+        android:id="@+id/IVDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2dbcd7"
+        tools:ignore="ContentDescription" >
+    </View>-->
+
+</FrameLayout>

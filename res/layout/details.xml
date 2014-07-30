@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:ignore="ContentDescription" >
+
+    <com.cw.msumit.views.TileView
+        android:id="@+id/TileView"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/TileView"
+        android:background="#efefef"
+        tools:ignore="UseCompoundDrawables,HardcodedText,ContentDescription" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/taskSummaryContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/taskSummaryContainerText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Task Summary"
+                    android:textColor="#2dbcd7"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#e0e1e2" />
+
+                <RelativeLayout
+                    android:id="@+id/taskDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="5dp" >
+
+                    <EditText
+                        android:id="@+id/reminderText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tts"
+                        android:background="@drawable/custom_edittext"
+                        android:hint="@string/remindeTextHint"
+                        android:inputType="textMultiLine|textNoSuggestions|textCapSentences"
+                        android:textColor="#5d6061"
+                        android:textColorHint="#cbcbcb"
+                        android:textSize="20sp" >
+                    </EditText>
+
+                    <ImageButton
+                        android:id="@+id/tts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/reminderText"
+                        android:layout_alignParentRight="true"
+                        android:background="@android:color/transparent"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:scaleType="center"
+                        android:src="@drawable/tts" />
+
+                    <LinearLayout
+                        android:id="@+id/threeTexts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/reminderText"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/calendarText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="3dp"
+                            android:drawableTop="@drawable/bell"
+                            android:gravity="center_horizontal"
+                            android:text="Reminder"
+                            android:textColor="#828282"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/note"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="3dp"
+                            android:drawableTop="@drawable/note"
+                            android:gravity="center_horizontal"
+                            android:text="Note"
+                            android:textColor="#828282"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/subtask"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="3dp"
+                            android:drawableTop="@drawable/no_subtask"
+                            android:gravity="center_horizontal"
+                            android:text="Subtasks"
+                            android:textColor="#828282"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/ratingStar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="3dp"
+                            android:drawableTop="@drawable/star"
+                            android:gravity="center_horizontal"
+                            android:text="Important"
+                            android:textColor="#828282"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/View03"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/threeTexts"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#eceded"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:id="@+id/rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/View03"
+                        android:layout_marginTop="5dp"
+                        android:baselineAligned="false"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/location"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/location_grey"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxEms="5"
+                            android:maxLines="2"
+                            android:paddingLeft="15dp"
+                            android:text="Location"
+                            android:textColor="#828282"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/folders"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/category"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:ellipsize="end"
+                                android:maxEms="5"
+                                android:maxLines="1"
+                                android:text="Personal"
+                                android:textColor="#828282"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="06dp"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/spinner" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/taskAssignmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/taskSummaryContainer"
+                android:background="@drawable/card"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/taskAssignedTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:text="Task assigned to"
+                        android:textColor="#2dbcd7"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_toLeftOf="@+id/taskActivityButton"
+                        android:background="#e0e1e2" />
+
+                    <ImageButton
+                        android:id="@+id/taskActivityButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/transparent"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/comment" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#e0e1e2" />
+
+                <LinearLayout
+                    android:id="@+id/peopleInvited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <!--
+                    <View
+                    android:id="@+id/newDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/shadowlayout" />-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/addPersonOverlayContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:padding="5dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/addPersonOverlay"
+                            android:src="@drawable/add_person" />
+
+                        <TextView
+                            android:id="@+id/addPersonOverlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="Assign to someone"
+                            android:textColor="#828282"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/addPeopleRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:padding="3dp"
+                        android:visibility="gone" >
+
+                        <ImageButton
+                            android:id="@+id/addButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/autoCompleteName"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/addbutton"
+                            android:src="@drawable/content_new" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toLeftOf="@+id/addButton"
+                            android:background="@drawable/custom_edittext"
+                            android:hint="@string/enterNameTextHint"
+                            android:inputType="textNoSuggestions|textCapSentences"
+                            android:paddingTop="5dp"
+                            android:textColor="#5d6061"
+                            android:textColorHint="#cbcbcb" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">Meedo</string>
+    <string name="fb_app_id">341800519237485</string>
+    <string name="newTask">New Task</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="remindeTextHint">Task title..</string>
+    <string name="starred">Star</string>
+    <string name="addButtonText">+</string>
+    <string name="enterNameTextHint">Start typing a name</string>
+    <string name="enterUpdateTextHint">Add a comment</string>
+    <string name="setReminderButtonText">Set Reminder</string>
+    <string name="newTaskText">New Task</string>
+    <string name="action">Perform action</string>
+    <string name="undobar_sample_message">Action performed.</string>
+    <string name="undo">Undo</string>
+</resources>

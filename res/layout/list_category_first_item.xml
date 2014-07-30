@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText,ContentDescription" >
+
+     <ImageButton
+        android:id="@+id/createNewList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/enterNewListName"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/addbutton"
+        android:src="@drawable/content_new" />-->
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/enterNewListNameFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="8dp" >
+
+        <TextView
+            android:id="@+id/newCategoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="New List"
+            android:drawablePadding="2dp"
+            android:drawableLeft="@drawable/add_person"
+            android:textColor="#7f7f7f"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/enterNewListName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:hint="Add New List"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:inputType="textCapSentences"
+            android:textColor="#5d6061"
+            android:textSize="20sp"
+            android:imeOptions="actionDone"
+            android:visibility="gone" />
+    </FrameLayout>

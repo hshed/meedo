@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,ContentDescription" >
+
+    <include
+        android:id="@+id/side_menu_headerview"
+        android:layout_alignParentTop="true"
+        layout="@layout/side_menu_headerview" />
+
+    <ListView
+        android:id="@+id/sideMenuList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/side_menu_headerview"
+        android:layout_above="@+id/createNewListLayout"
+        android:background="@drawable/abs__ab_solid_dark_holo"
+        android:cacheColorHint="#00000000"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.1dp"
+        android:footerDividersEnabled="false" />
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/createNewListLayout"
+        android:background="@drawable/sidemenu_shadow" />
+
+    <RelativeLayout
+        android:id="@+id/createNewListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#434343"
+        android:paddingBottom="5dp" >
+
+        <ImageButton
+            android:id="@+id/tts1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterNewListName"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="center"
+            android:src="@drawable/tts" />
+
+        <ImageButton
+            android:id="@+id/createNewList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterNewListName"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/content_new" />
+
+        <EditText
+            android:id="@+id/enterNewListName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/createNewList"
+            android:layout_toRightOf="@+id/tts1"
+            android:background="@drawable/custom_edittext"
+            android:hint="Add List"
+            android:inputType="textCapSentences"
+            android:textColor="#ffffff"
+            android:textColorHint="#5d6061" />
+    </RelativeLayout>
+
+</RelativeLayout>

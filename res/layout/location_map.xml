@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription,HardcodedText" >
+
+    <RelativeLayout
+        android:id="@+id/locationSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp" >
+
+        <com.cw.msumit.views.LocationAutoCompleteTextView
+            android:id="@+id/searchLocationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:hint="Search Location"
+            android:padding="8dp"
+            android:textColor="#828282"
+            android:textColorHint="#b2b2b2"
+            android:textSize="18sp" >
+        </com.cw.msumit.views.LocationAutoCompleteTextView>
+
+        <ProgressBar
+            android:id="@+id/locationSearchProgress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            android:indeterminate="true" />
+
+        <ImageView
+            android:id="@+id/locationSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/search" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/searchLocationName"
+            android:background="#b2b2b2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/locationItemExpanded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationSearchBar"
+        android:background="#eeefef"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/locationIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:scaleType="center"
+            android:src="@drawable/repeat_selected" />
+
+        <LinearLayout
+            android:id="@+id/locationNameAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/locationIcon"
+            android:layout_toLeftOf="@+id/popView"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/locationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:ems="3"
+                android:lines="1"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="Play Services Not Found"
+                android:textColor="#34b5d0"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/locationDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:ems="3"
+                android:maxLines="2"
+                android:paddingLeft="10dp"
+                android:text="You need to have Google Play Services installed in order to use this feature."
+                android:textColor="#afafaf"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/popView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:src="@drawable/overflow" />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/mapNew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mathakharab"
+        android:layout_below="@+id/locationItemExpanded"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mapNew"
+        android:background="#80000000" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/getDirection"
+            android:background="@android:color/transparent"
+            android:src="@drawable/direction" />
+
+        <TextView
+            android:id="@+id/getDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:text="GET DIRECTION"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mathakharab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fafbfb"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/newestView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/shadowlayout" />
+
+        <LinearLayout
+            android:id="@+id/locationDoneOrNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp" >
+
+            <TextView
+                android:id="@+id/locationDoneText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/vertical_line"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="DONE"
+                android:textColor="#2dbcd7"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/noLocationText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="NO LOCATION"
+                android:textColor="#2dbcd7"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
